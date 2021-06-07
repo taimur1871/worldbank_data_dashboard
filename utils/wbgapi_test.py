@@ -3,8 +3,6 @@
 'this is an example of code for gathering data from world bank open source databank'
 
 import wbgapi as wb
-import pandas as pd
-#from pprint import pprint
 
 dbs = wb.source.info()
 db_list = dbs.table()

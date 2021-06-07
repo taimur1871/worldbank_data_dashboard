@@ -1,16 +1,27 @@
 # Worldbank Data Dashboard
 
 ## Introduction
+This is a demo app meant to get population related data from World Bank Website and display it as a table. It can be refactored or expanded to include other available databases. It is also possible to add data visualizations to this app.
+
+The idea is to build a framework which can then be easily used by anyone to build simple data apps.
 
 ## Environment
+* fastapi 0.63.0
+* gunicorn 20.0.4
+* Jinja2 2.11.2
+* pandas 1.1.4
+* requests 2.22.0
+* uvicorn 0.13.3
+* wbgapi 1.0.5
 
 ## Sources
-
+The following resource were used for this project.
 * https://datahelpdesk.worldbank.org/knowledgebase/topics/125589-developer-information
 * https://pypi.org/project/wbgapi/
-* 
+* https://fastapi.tiangolo.com/
 
-### Newbie Ambitions
+### Other Possible Databases
+The following is a list of other databases that can be explored in future
 
 1 World Development Indicators 206
 2 Worldwide Governance Indicators 1444
