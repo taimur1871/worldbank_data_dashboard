@@ -17,7 +17,6 @@ import pandas as pd
 # Create app and model objects
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
-app.mount("/data", StaticFiles(directory="data"), name="data")
 templates = Jinja2Templates(directory="templates/")
 
 # define list of features at application start up
