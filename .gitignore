@@ -1,0 +1,18 @@
+# cython files
+__pycache__
+*.pyc
+
+# image files
+example_files
+*.jpg
+*.png
+*.JPG
+*.db
+*.tmp
+*.jpeg
+
+# model files
+*.h5
+*.pb
+*.pbtxt
+*.ckpt

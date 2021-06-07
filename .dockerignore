@@ -1,0 +1,14 @@
+# ignore dockerfile
+Dockerfile
+
+#readme
+*.md
+
+# image files
+*.jpg
+*.JPG
+*.png
+*.jpeg
+
+# YAML files
+*.yaml

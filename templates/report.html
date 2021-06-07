@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dull Report</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 75%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.printme {
+	display: none;
+}
+@media print {
+	.no-print  {
+		display: none;
+	}
+	.printme  {
+		display: block;
+	}
+}
+
+</style>
+
+<body>
+    
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-content" style="max-width:1500px">
+
+    <!-- Header -->
+    <header class="w3-panel w3-center w3-opacity" style="padding:16px 64px">
+        <h1 class="w3-xlarge">Dull Summary</h1>
+
+        <div class="w3-padding-16 no-print">
+        <div class="w3-bar w3-border">
+            <a href="/" class="w3-bar-item w3-button">Grade Another Bit</a>
+            <a class="w3-bar-item w3-button" onclick="window.print()">Print Report</a>
+            <a href="/reports" class="w3-bar-item w3-button w3-hide-small">View Reports</a>
+            <a href="/offset_analysis" class="w3-bar-item w3-button w3-hide-small">Offset Analysis</a>
+        </div>
+        </div>
+    </header>
+
+    <!-- Photo Grid -->
+    <div class="w3-row-padding" style="margin-bottom:256px">
+        <div class="w3-half w3-center">
+            <div>
+                <img src="../storage/{{SN}}/{{top_name}}" style="width:30%">
+                <img src="../storage/{{SN}}/{{blade_pic}}" style="width:30%"><br>
+                <p style="text-align: center;">{{message}}</p><br>
+                <h3>IADC Grading</h3>
+                <table class="center" style="width: 80%;">
+                    <tr>
+                      <th>Inner</th>
+                      <th>Outer</th>
+                      <th>Main Dull</th>
+                      <th>Second Dull</th>
+                      <th>Location</th>
+                    </tr>
+                    <tr>
+                      <td>{{inner}}</td>
+                      <td>{{outer}}</td>
+                      <td>{{main}}</td>
+                      <td>{{second}}</td>
+                      <td>{{loc}}</td>
+                    </tr>
+                </table><br>
+
+                <h3>Location Based Grading</h3>
+                <div class="resp-container">
+                    <iframe class="resp-iframe" src="../storage/bar_graph.html" frameBorder="0"></iframe>
+                </div>
+                
+            </div>
+        </div>
+  
+        <div class="w3-half w3-center">
+            <p style="text-align: center;">{{message}}</p>
+            <div class="resp-container">
+                <iframe class="resp-iframe" src="../storage/pie_wear.html" height="400" width="600" frameBorder="0" title="graph"></iframe><br>        
+            </div>
+            <div class="resp-container">
+                <iframe class="resp-iframe" src="../storage/pie_type.html" height="400" width="600" frameBorder="0" title="graph"></iframe>
+            </div>
+            <div>
+                <textarea placeholder="enter comments here - drag to resize"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Page Content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-8 w3-light-grey w3-center w3-large no-print"> 
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </footer>
+
+</body>
+</html>
