@@ -26,7 +26,13 @@ There are two possible ways to use this app
     Use the command ```docker build -t <app_name> . ```
     Once the app is built use the command ```docker run --rm --name <app_name_running> -p {local_port}:{docker_image_port} -ti <container_name>```
 
-## Sources
+## Deployment
+The best way to deploy this app is to use a serverless service such as AWS Farget or GCP CloudRun. To do that simply build the docker container and upload it to the Cloud repository. Then follow the instructions on these services to deploy the container. (GCP instructions can be found here https://cloud.google.com/run/docs/quickstarts/build-and-deploy/python)
+
+### Automating Deployment
+It is also possible to automate the process by using cloudbuild or similar services.
+
+### Sources
 The following resource were used for this project.
 * https://datahelpdesk.worldbank.org/knowledgebase/topics/125589-developer-information
 * https://pypi.org/project/wbgapi/
