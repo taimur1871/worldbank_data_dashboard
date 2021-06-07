@@ -52,7 +52,7 @@ async def read_root(request:Request):
 ''' 
 function originally meant to show results on a separate page,
 not being used here for now
-'''
+
 # get the data and process it to a pandas dataframe 
 # can be changed to dask or other formats
 @app.post("/load_data")
@@ -68,3 +68,4 @@ async def create_upload_files(request:Request, keyword):
                                     "inner":inner, "outer":outer, "main":main, "second":second,
                                     "loc":loc, "top_name": top_name_disp, "blade_pic":blade_1,
                                     "SN":temp_folder[0]})
+'''
