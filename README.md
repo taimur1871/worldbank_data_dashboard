@@ -14,6 +14,18 @@ The idea is to build a framework which can then be easily used by anyone to buil
 * uvicorn 0.13.3
 * wbgapi 1.0.5
 
+## Usage
+There are two possible ways to use this app
+1. Run Locally
+    To run the app locally create a clone of the app. Then change the port number in app.py to any other than 80 (default port for internet access). 
+    Install requirements by using "pip install requirements.txt"
+    Start app by typing "python app.py" in terminal or command shell.
+2. Run Using Docker
+    It is also possible to create a docker container.
+    Just Open the folder in terminal or command shell.
+    Use the command ```docker build -t <app_name> . ```
+    Once the app is built use the command ```docker run --rm --name <app_name_running> -p {local_port}:{docker_image_port} -ti <container_name>```
+
 ## Sources
 The following resource were used for this project.
 * https://datahelpdesk.worldbank.org/knowledgebase/topics/125589-developer-information
