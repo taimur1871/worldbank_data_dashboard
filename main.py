@@ -46,7 +46,7 @@ async def read_root(request:Request):
     return templates.TemplateResponse("welcome.html", 
     {"request": request, "features":features,
     "dataset_name":keyword[0][1],
-    "prop":[prop.to_html(classes='data', header='true')]})
+    "prop":[prop.to_html(table_id='table_id').replace('border="1"', ' ')]})
 
 ''' 
 function originally meant to show results on a separate page,
